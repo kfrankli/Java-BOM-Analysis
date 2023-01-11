@@ -70,8 +70,8 @@ def compare_poms(appPom, bomPom):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Compare two Java pom files to see what they have in common with regards to dependancies. This is designed to assist with large scale analysis of Java maven projects for BOM inclusion. Outputs a markdown format table.", formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
-    parser.add_argument("template", help="Template pom created via \"mvn help:effective-pom -Doutput=effectivepom.xml.\"")
-    parser.add_argument("pom", help="pom.xml of the Java project in question")
+    parser.add_argument("-t", "--template", help="Template pom created via \"mvn help:effective-pom -Doutput=effectivepom.xml.\"")
+    parser.add_argument("-p", "--pom", help="pom.xml of the Java project in question")
     args = parser.parse_args()
     config = vars(args)
 
