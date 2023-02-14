@@ -28,7 +28,7 @@ mvn help:effective-pom -f ./example/pom-empty-with-bom.xml -Doutput=./effective-
 Once we have our effective pom, we can run the compare script to see what our app dependencies are also in the the effective pom, representing all dependencies provided by our bom.
 
 ```
-$ ./compare.py --template=./example/effective-pom.xml --pom=./example/pom-my-app.xml
+$ ./compare.py --template=./example/effective-pom.xml --pom=./example/pom.xml
 | groupId | artifactId | pom.xml version | BOM version |
 |---|---|---|---|
 | org.hibernate | hibernate-envers | 5.1.17.Final | 5.3.20.Final-redhat-00001 |
